@@ -51,10 +51,10 @@ with col5:
     st.markdown(f'<div class="metric-box"><div><b>4,09</b></div><div class="metric-label">Average Rating</div></div>', unsafe_allow_html=True)
 
 # "Visualization of Total Transactions and Total Revenue"
-file_path_total_revenue = r"C:\Users\Agung Diah\Downloads\E-commerce\Dataset\total_revenue_per_year.csv"
+file_path_total_revenue = "https://raw.githubusercontent.com/agungdiah/sales_performance/master/Dataset/total_revenue_per_year.csv"
 revenue_data = pd.read_csv(file_path_total_revenue)
 
-file_path_total_transaction = r"C:\Users\Agung Diah\Downloads\E-commerce\Dataset\total_transactions_per_year.csv"
+file_path_total_transaction = "https://raw.githubusercontent.com/agungdiah/sales_performance/master/Dataset/total_transactions_per_year.csv"
 transaction_data = pd.read_csv(file_path_total_transaction)
 
 col1, col2 = st.columns(2)
@@ -105,7 +105,7 @@ with col2:
     st.plotly_chart(fig2, use_container_width=True) 
 
 # "Product Category Distribution Across States and Cities Visualization"
-file_path_product_sales_by_region = r"C:\Users\Agung Diah\Downloads\E-commerce\Dataset\product_sales_by_region.csv"
+file_path_product_sales_by_region = "https://raw.githubusercontent.com/agungdiah/sales_performance/master/Dataset/product_sales_by_region.csv"
 product_sales_by_region = pd.read_csv(file_path_product_sales_by_region)
 
 # Filter setup
@@ -174,12 +174,12 @@ if st.button("Show Detailed Information"):
 
 col5, col6 = st.columns(2)
 # Top 5 Best Performing Products by Transaction
-file_path_top_5_products = r"C:\Users\Agung Diah\Downloads\E-commerce\Dataset\top_5_products.csv"
+file_path_top_5_products = "https://raw.githubusercontent.com/agungdiah/sales_performance/master/Dataset/top_5_products.csv"
 top_5_products = pd.read_csv(file_path_top_5_products)
 top_5_products['product_category_name_english'] = top_5_products['product_category_name_english'].str.replace('_', ' ')
 
 # Performance of Deliveries: On-Time vs Late
-file_path_performa_logistik = r"C:\Users\Agung Diah\Downloads\E-commerce\Dataset\performa_logistik1.csv"
+file_path_performa_logistik = "https://raw.githubusercontent.com/agungdiah/sales_performance/master/Dataset/performa_logistik1.csv"
 performa_logistik = pd.read_csv(file_path_performa_logistik)
 performa_logistik['status'] = performa_logistik['status'].replace({
     'Tepat Waktu': 'On Time',
